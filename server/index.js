@@ -29,7 +29,7 @@ app.get('/api/products', (req, res) => {
     .catch(err => console.error(err))
 })
 
-app.get('/api/similar_products/get', (req, res) => {
+app.get('/api/similar_products/getAll', (req, res) => {
   axios
     .get(`http://localhost:3003/api/similar_products/getAll`)
     .then(response => res.send(response.data))
@@ -102,4 +102,4 @@ app.get('/api/sort-by-rating-ascending', (req, res) => {
     .catch(err => console.error(err))
 })
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+app.listen(port, () => console.log(`Main app listening on port ${port}`));
