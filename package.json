@@ -24,6 +24,7 @@
     "express": "^4.17.1",
     "http-proxy-middleware": "^0.20.0",
     "morgan": "^1.9.1",
+    "newrelic": "^5.11.0",
     "nodemon": "^1.19.2",
     "request": "^2.88.0"
   }

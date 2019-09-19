@@ -1,3 +1,4 @@
+const nr = require('newrelic')
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
@@ -28,9 +29,9 @@ app.get('/api/products', (req, res) => {
     .catch(err => console.error(err))
 })
 
-app.get('/api/similar_products', (req, res) => {
+app.get('/api/similar_products/get', (req, res) => {
   axios
-    .get(`http://localhost:3003/api/similar_products`)
+    .get(`http://localhost:3003/api/similar_products/getAll`)
     .then(response => res.send(response.data))
     .catch(err => console.error(err))
 })
